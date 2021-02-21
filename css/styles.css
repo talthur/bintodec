@@ -1,0 +1,148 @@
+body{
+    
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+main{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+input{
+    font-size: 3em;
+    border: none;
+    background-color: antiquewhite;
+    border-bottom: 1px solid rgb(59, 59, 59);
+    margin-bottom: 1em;
+    outline: none;
+    color: rgb(59, 59, 59);
+
+}
+
+button{
+    max-width: 10em;
+    min-height: 4em;
+    background-color: antiquewhite;
+    border: 1px solid rgb(59, 59, 59);
+    cursor: pointer;
+    outline: none;
+    color: rgb(59, 59, 59);
+
+}
+
+button:hover{
+    background-color: rgb(252, 243, 232);
+}
+
+
+@keyframes alert {
+    0%   {background-color: antiquewhite; left:100%; top:50%;}
+    100% {background-color:rgb(255, 28, 255)}
+  }
+
+
+.alert{
+
+    color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(255, 28, 255); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: alert;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    animation-fill-mode: forwards
+
+}
+
+
+.alert p{
+    font-size: 3em;
+    align-self: center;
+}
+
+@keyframes result-animation{
+
+    0%   {background-color: antiquewhite; left:100%; top:50%;}
+    100% {background-color:rgb(15, 15, 15)}
+
+}
+
+#black-body{
+    background-color:rgb(15, 15, 15);
+    animation-name: result-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.box-result{
+    position: absolute;
+    border: 1px solid antiquewhite;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.box-result p{
+
+    color: antiquewhite;
+    align-self: center;
+    font-size: 5em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.box-result:hover{
+    background-color: rgb(51, 51, 51);
+}
+
+@media only screen and (max-width: 766px){
+    .input{ 
+
+        font-size: 2em;
+        
+    }
+
+    .alert p{
+        font-size: 2em;
+        align-self: center;
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+    .input{ 
+        font-size: 1em;
+
+    }
+
+    .alert p{
+        font-size: 1em;
+        align-self: center;
+    }
+
+    button{
+        max-width: 5em;
+        min-height: 2em;
+        font-size: 0.8em;
+    
+    }
+}
+
